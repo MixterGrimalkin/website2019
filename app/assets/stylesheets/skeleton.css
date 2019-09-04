@@ -44,14 +44,14 @@
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 85%;
+    width: 100%;
     padding: 0; }
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 95%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -143,11 +143,11 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
+  h1 { font-size: 4.0rem; }
+  h2 { font-size: 3.2rem; }
   h3 { font-size: 3.6rem; }
   h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
+  h5 { font-size: 2.0rem; }
   h6 { font-size: 1.5rem; }
 }
 
@@ -219,8 +219,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: rgb(205, 43, 40);
-  border-color: rgb(205, 43, 40); }
+  background-color: rgb(128, 29, 27);
+  border-color: rgb(128, 29, 27); }
 
 
 /* Forms

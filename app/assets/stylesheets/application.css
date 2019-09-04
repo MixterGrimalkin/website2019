@@ -15,8 +15,9 @@
  */
 
 * {
-    font-family: 'Jaldi', sans-serif;
+    font-family: 'Bai Jamjuree', sans-serif;
 }
+
 
 nav {
     padding: 5px;
@@ -32,7 +33,7 @@ nav a {
 
 .content {
     background-color: rgb(241, 231, 210);
-
+    overflow: scroll;
 }
 
 .my-name {
@@ -49,11 +50,36 @@ nav a {
     color: rgb(222, 137, 121);
 }
 
-#contact-btn {
-    font-family: 'Orbitron', sans-serif;
+.contact-btn {
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+
+.about-me {
+    background: rgb(55, 14, 13);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: small;
+}
+.about-me img {
+    /*border: 1px solid #939393;*/
+    border-radius: 5px;
+}
+
+.left-half {
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+
+.right-half {
+    width: calc(50% - 10px);
+    float: right;
+    text-align: left;
+    padding-left: 10px;
 }
 
 /* Larger than mobile */
@@ -95,9 +121,9 @@ nav a {
     .content {
         margin-left: 30%;
         float: left;
-        padding: 20px;
-        width: calc(70% - 40px);
-        height: calc(100% - 40px);
+        padding: 5px;
+        width: calc(70% - 10px);
+        height: calc(100% - 10px);
         position: absolute;
     }
 }
