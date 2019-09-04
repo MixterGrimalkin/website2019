@@ -14,30 +14,37 @@
  *= require_self
  */
 
+* {
+    font-family: 'Jaldi', sans-serif;
+}
+
 nav {
     padding: 5px;
 }
 nav a {
     text-decoration: none;
-}
-
-* {
-    font-family: 'Jaldi', sans-serif;
+    opacity: 1.0;
 }
 
 .my-name {
-    /*text-transform: uppercase;*/
-    color: white;
+    font-family: 'Rock Salt', sans-serif;;
     font-weight: normal;
     font-size: xx-large;
-    font-family: 'Rock Salt', sans-serif;;
+    color: white;
 }
 
 .my-tag {
     font-family: 'Orbitron', sans-serif;
-    color: rgb(222, 137, 121);
-    font-weight: normal;
     font-size: x-large;
+    font-weight: normal;
+    color: rgb(222, 137, 121);
+}
+
+#contact-btn {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Larger than mobile */
@@ -45,7 +52,7 @@ nav a {
     .content {
         padding: 5px;
     }
-    .sidebar {
+    .my-sidebar {
         text-align: center;
         color: white;
         width:100%;
@@ -54,7 +61,7 @@ nav a {
     }
 }
 
-.sidebar {
+.my-sidebar {
     background-color: rgb(128, 29, 27);
 }
 
@@ -63,13 +70,17 @@ nav a {
 
 }
 
+
 /* Larger than tablet */
 @media (min-width: 750px) {
+    nav {
+        padding-top: 30px;
+    }
     .outer {
         flex-flow: column;
         overflow: hidden;
     }
-    .sidebar {
+    .my-sidebar {
         overflow: hidden;
         text-align: right;
         width:calc(30% - 40px);

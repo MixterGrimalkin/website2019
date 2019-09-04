@@ -12,6 +12,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
   <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', 'data-turbolinks-track' => 'reload' %>
 
+  <!-- jQuery -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <!-- Skeleton -->
   <%= stylesheet_link_tag 'normalize', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <%= stylesheet_link_tag 'skeleton', media: 'all', 'data-turbolinks-track' => 'reload' %>
@@ -24,21 +29,8 @@
 </head>
 
 <body>
-<div class="sidebar">
-  <div class="my-name">Barri Mason</div>
-  <div class="my-tag">Freelance Coder</div>
-  <nav class="nav">
-    <a href="https://www.linkedin.com/in/barri-mason-8b6ab435/" target="_blank">
-      <%= image_tag 'linkedin-white.png', size: 32 %>
-    </a>
-    <a href="https://www.peopleperhour.com/freelancer/development-it/barri-mason-software-developer-ymvmaja" target="_blank">
-      <%= image_tag 'pph.png', size: 32 %>
-    </a>
-    <a href="https://github.com/MisterGrimalkin" target="_blank">
-      <%= image_tag 'GitHub-Mark-Light-32px.png', alt: 'Visit me on GitHub' %>
-    </a>
-  </nav>
-</div>
+<%= render partial: 'shared/sidebar' %>
+<%= render partial: 'shared/contact' %>
 <div class="content">
   <%= yield %>
 </div>

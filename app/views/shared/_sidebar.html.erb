@@ -1,0 +1,32 @@
+<div class="my-sidebar">
+  <div class="my-name">Barri Mason</div>
+  <div class="my-tag">Freelance Coder</div>
+  <nav class="nav">
+    <a href="https://www.linkedin.com/in/barri-mason-8b6ab435/"
+       target="_blank" title="Visit me on LinkedIn">
+      <%= image_tag 'linkedin-white.png', size: 32 %>
+    </a>
+    <a href="https://www.peopleperhour.com/freelancer/development-it/barri-mason-software-developer-ymvmaja"
+       target="_blank" title="Visit me on PeoplePerHour">
+      <%= image_tag 'pph.png', size: 32 %>
+    </a>
+    <a href="https://github.com/MisterGrimalkin"
+       target="_blank" title="Visit me on GitHub">
+      <%= image_tag 'GitHub-Mark-Light-32px.png', alt: 'Visit me on GitHub' %>
+    </a>
+    <a id="contact-btn" title="Contact me">
+      <%= image_tag 'envelope.png', alt: 'Visit me on GitHub' %>
+    </a>
+  </nav>
+</div>
+
+<script>
+  var $nava = $("nav a");
+  $nava
+      .mouseover(function () {
+        $nava.not(this).stop().animate({opacity: 0.5}, 600);
+      })
+      .mouseout(function () {
+        $nava.stop().animate({opacity: 1.0}, 200);
+      });
+</script>

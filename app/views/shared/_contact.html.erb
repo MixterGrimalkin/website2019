@@ -1,0 +1,34 @@
+<div id="contact-dialog" title="Contact Me" style="display: none;">
+  <form>
+    <div class="row">
+      <div class="twelve columns">
+        <label for="exampleEmailInput">Your email</label>
+        <input class="u-full-width" type="email" id="exampleEmailInput">
+      </div>
+    </div>
+    <label for="exampleMessage">Message</label>
+    <textarea class="u-full-width" placeholder="Hi Barri…" id="exampleMessage"></textarea>
+    <input id="send-contact" class="button-primary" type="button" value="Send">
+    <input id="cancel-contact" class="button" type="button" value="Cancel">
+  </form>
+</div>
+
+<script>
+  $(function() {
+    $("#contact-btn").click(function() {
+          $("#contact-dialog").dialog({
+            dialogClass: '#no-close',
+            width: '70%',
+            modal: true,
+            draggable: true,
+            resizable: false,
+            closeable: false
+          });
+        }
+    );
+    $("#cancel-contact").click(function() {
+        $("#contact-dialog").dialog("close");
+    });
+
+  });
+</script>
