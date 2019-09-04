@@ -14,5 +14,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 # PURE stuff
-Rails.application.config.assets.precompile += %w( layouts/blog-old-ie.css )
-Rails.application.config.assets.precompile += %w( layouts/blog.css )
+Rails.application.config.assets.precompile += %w( normalize.css )
+Rails.application.config.assets.precompile += %w( skeleton.css )

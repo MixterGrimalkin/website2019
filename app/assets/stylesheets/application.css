@@ -13,3 +13,85 @@
  *= require_tree .
  *= require_self
  */
+
+nav {
+    padding: 5px;
+}
+nav a {
+    text-decoration: none;
+}
+
+* {
+    font-family: 'Jaldi', sans-serif;
+}
+
+.my-name {
+    /*text-transform: uppercase;*/
+    color: white;
+    font-weight: normal;
+    font-size: xx-large;
+    font-family: 'Rock Salt', sans-serif;;
+}
+
+.my-tag {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(222, 137, 121);
+    font-weight: normal;
+    font-size: x-large;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    .content {
+        padding: 5px;
+    }
+    .sidebar {
+        text-align: center;
+        color: white;
+        width:100%;
+        height: 10%;
+        padding-top: 20px;
+    }
+}
+
+.sidebar {
+    background-color: rgb(128, 29, 27);
+}
+
+.content {
+    background-color: rgb(241, 231, 210);
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    .outer {
+        flex-flow: column;
+        overflow: hidden;
+    }
+    .sidebar {
+        overflow: hidden;
+        text-align: right;
+        width:calc(30% - 40px);
+        height: calc(100% - 200px);
+        padding: 200px 20px 0 20px;
+        position: absolute;
+    }
+    .content {
+        margin-left: 30%;
+        float: left;
+        padding: 20px;
+        width: calc(70% - 40px);
+        height: calc(100% - 40px);
+        position: absolute;
+    }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+/*@media (min-width: 550px) {}*/
+
+/* Larger than desktop */
+/*@media (min-width: 1000px) {}*/
+
+/* Larger than Desktop HD */
+/*@media (min-width: 1200px) {}*/

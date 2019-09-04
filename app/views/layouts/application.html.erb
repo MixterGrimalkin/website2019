@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Barri Mason</title>
-    <%= csrf_meta_tags %>
+<head>
+  <meta charset="utf-8">
+  <title>Barri Mason Freelance Coder</title>
+  <meta name="description" content="Barri Mason is a freelance software engineer and tech tinkerer">
+  <meta name="author" content="Barri Mason">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
 
-    <!-- Pure CSS Framework -->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
-          integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47"
-          crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', 'data-turbolinks-track' => 'reload' %>
 
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
-    <!--<![endif]-->
+  <!-- Skeleton -->
+  <%= stylesheet_link_tag 'normalize', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= stylesheet_link_tag 'skeleton', media: 'all', 'data-turbolinks-track' => 'reload' %>
 
-    <!-- Pure GRID stuff -->
-    <%= stylesheet_link_tag 'layouts/blog.css' %>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Jaldi|Rock+Salt|Orbitron&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="sidebar">
+  <div class="my-name">Barri Mason</div>
+  <div class="my-tag">Freelance Coder</div>
+  <nav class="nav">
+    <a href="https://www.linkedin.com/in/barri-mason-8b6ab435/" target="_blank">
+      <%= image_tag "linkedin-white", size: 32 %>
+    </a>
+    <a href="https://www.peopleperhour.com/freelancer/development-it/barri-mason-software-developer-ymvmaja" target="_blank">
+      <%= image_tag "pph.png", size: 32 %>
+    </a>
+    <a href="https://github.com/MisterGrimalkin" target="_blank">
+      <%= image_tag "GitHub-Mark-Light-32px.png", alt: 'Visit me on GitHub' %>
+    </a>
+  </nav>
+</div>
+<div class="content">
+  <%= yield %>
+</div>
+</body>
 </html>
