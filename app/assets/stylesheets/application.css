@@ -26,6 +26,15 @@ nav a {
     opacity: 1.0;
 }
 
+.my-sidebar {
+    background-color: rgb(128, 29, 27);
+}
+
+.content {
+    background-color: rgb(241, 231, 210);
+
+}
+
 .my-name {
     font-family: 'Rock Salt', sans-serif;;
     font-weight: normal;
@@ -49,9 +58,6 @@ nav a {
 
 /* Larger than mobile */
 @media (min-width: 400px) {
-    .content {
-        padding: 5px;
-    }
     .my-sidebar {
         text-align: center;
         color: white;
@@ -59,16 +65,14 @@ nav a {
         height: 10%;
         padding-top: 20px;
     }
+    .content {
+        padding: 5px;
+        position: absolute;
+        height: 90%;
+        width: 100%
+    }
 }
 
-.my-sidebar {
-    background-color: rgb(128, 29, 27);
-}
-
-.content {
-    background-color: rgb(241, 231, 210);
-
-}
 
 
 /* Larger than tablet */
