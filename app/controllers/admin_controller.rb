@@ -21,7 +21,7 @@ class AdminController < ApplicationController
       @project[:title] = params[:title]
       @project[:description] = params[:description]
       @project[:content] = params[:content]
-      @project[:content] = params[:content]
+      @project[:image] = params[:image]
       @project.save
       flash[:notice] = 'Project saved'
       redirect_back(fallback_location: root_path)
