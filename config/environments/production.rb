@@ -90,6 +90,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Devise needs this
-  config.action_mailer.default_url_options = { host: ENV['HOST'], port: ENV['PORT'] }
+  config.action_mailer.default_url_options = { host: ENV['DOMAIN'], port: ENV['PORT'] }
 
 end
