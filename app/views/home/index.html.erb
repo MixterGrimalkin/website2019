@@ -2,7 +2,6 @@
   <div class="row">
     <div class="eight columns">
       <h1>Projects</h1>
-      <p>
         <% @projects.each_slice(3) do |slice| %>
           <div class="row">
             <% slice.each do |project| %>
@@ -22,7 +21,6 @@
             <% end %>
           </div>
       <% end %>
-      </p>
     </div>
     <div class="four columns about-me">
       <%= render partial: 'shared/aboutme' %>

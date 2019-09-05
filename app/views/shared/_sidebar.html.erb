@@ -14,13 +14,12 @@
     </a>
     <a href="https://github.com/MisterGrimalkin"
        target="_blank" title="Visit me on GitHub">
-      <%= image_tag 'GitHub-Mark-Light-32px.png', alt: 'Visit me on GitHub' %>
+      <%= image_tag 'GitHub-Mark-Light-32px.png' %>
     </a>
     <a class="contact-btn" title="Contact me">
-      <%= image_tag 'envelope.png', alt: 'Visit me on GitHub' %>
+      <%= image_tag 'envelope.png' %>
     </a>
   </nav>
-  <!-- Notices -->
   <% if user_signed_in? %>
       <div>
         <% if current_user.admin %>
@@ -32,7 +31,7 @@
         <%= link_to('Sign Out', destroy_user_session_path, method: :delete) %>
       </div>
   <% end %>
-  <!-- Notice -->
+  <!-- Notices -->
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 </div>
