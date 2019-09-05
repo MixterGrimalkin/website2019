@@ -7,9 +7,9 @@
           <div class="row">
             <% slice.each do |project| %>
                 <div class="four columns project"
-                     style="background-image: url('<%= project.image %>')">
+                     style="background-image: url('<%= project.image %>')"
+                      title="<%= project.description %>">
                   <div class="project-title">
-
                     <%= project.title %>
                   </div>
                 </div>

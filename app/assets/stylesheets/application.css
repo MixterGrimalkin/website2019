@@ -52,10 +52,36 @@ nav a {
     transform: scale(1.1);
 }
 
+.form-table label {
+    padding-top: 10px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.form-table em {
+    text-align: right;
+    float: right;
+}
+
+#user_remember_me {
+    margin-top: 20px;
+}
+
+.form-table tr {
+    padding: 2px;
+}
+
+.form-table td {
+    padding: 2px;
+}
+
 .my-sidebar {
     background-color: rgb(128, 29, 27);
 }
 
+.my-sidebar a {
+    text-decoration: none;
+}
 .content {
     background-color: rgb(241, 231, 210);
     overflow: scroll;
@@ -161,3 +187,14 @@ nav a {
 
 /* Larger than Desktop HD */
 /*@media (min-width: 1200px) {}*/
+
+/* Devise notices */
+.notice {
+    color: #00ed00;
+    display: inline;
+}
+
+.alert {
+    color: #ffd128;
+    display: inline;
+}
