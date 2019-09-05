@@ -51,7 +51,7 @@
 
     // Fade out notices
     setTimeout(function(){
-      $(".notice").fadeOut(2000, function(){
+      $(".notice").stop().fadeOut(2000, function(){
         $(".notice").text("").fadeIn();
       });
     }, 5000);
