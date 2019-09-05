@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Edit Project</h1>
+  <%= form_tag "/update_project/#{ @project.id }", id: 'project-form' do |f| %>
+      <div class="form-table">
+        <div class="row">
+          <div class="two columns">
+            <label for="title">Title</label>
+          </div>
+          <div class="ten columns">
+            <input class="u-full-width"
+                   type="text"
+                   name="title"
+                   id="title"
+                   value="<%= @project.title %>"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="two columns">
+            <label for="description">Description</label>
+          </div>
+          <div class="ten columns">
+            <input class="u-full-width"
+                   type="text"
+                   name="description"
+                   id="description"
+                   value="<%= @project.description %>"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="two columns">
+            <label for="image">Image location</label>
+          </div>
+          <div class="ten columns">
+            <input class="u-full-width"
+                   type="text"
+                   name="image"
+                   id="image"
+                   value="<%= @project.image %>"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <textarea class="u-full-width" style="height: 300px"
+                    name="content"><%= @project.content %>
+          </textarea>
+        </div>
+      </div>
+      <button type="submit" class="button button-primary">Save</button>
+      <a href="/project/<%= @project.id %>" class="button">View</a>
+  <% end %>
+</div>

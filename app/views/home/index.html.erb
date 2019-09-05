@@ -6,11 +6,17 @@
         <% @projects.each_slice(3) do |slice| %>
           <div class="row">
             <% slice.each do |project| %>
-                <div class="four columns project"
-                     style="background-image: url('<%= project.image %>')"
-                      title="<%= project.description %>">
-                  <div class="project-title">
-                    <%= project.title %>
+                <div class="four columns">
+                  <div class="project"
+                       style="background-image: url('<%= project.image %>')"
+                       title="<%= project.description %>">
+                    <a href="/project/<%= project.id %>">
+                      <div class="fill-parent">
+                        <div class="project-title">
+                          <%= project.title %>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
             <% end %>

@@ -1,6 +1,17 @@
 class HomeController < ApplicationController
+  protect_from_forgery with: :exception
+
   def index
     @projects = Project.all.order(updated_at: :desc)
+  end
+
+  def project
+    begin
+      @project = Project.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "Project #{params[:id]} not found!"
+      redirect_to '/'
+    end
   end
 
   def contact_me

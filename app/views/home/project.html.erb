@@ -1,0 +1,11 @@
+<div class="container project-page">
+  <h1>
+    <% if user_signed_in? && current_user.admin %>
+        <div class="u-pull-right">
+          <a href="/project/<%= @project.id %>/edit" class="button button-primary">Edit Project</a>
+        </div>
+    <% end %>
+    <%= @project.title %>
+  </h1>
+  <%== @project.content %>
+</div>

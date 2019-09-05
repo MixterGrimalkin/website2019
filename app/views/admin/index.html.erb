@@ -1,1 +1,22 @@
-<h1>LOGGED IN :)</h1>
+<div class="container">
+  <h1>Admin</h1>
+  <table class="u-full-width">
+    <thead>
+    <th>Project</th>
+    <th></th>
+    <th>Description</th>
+    </thead>
+    <tbody>
+    <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.title %></td>
+          <td>
+            <a class="button" href="/project/<%= project.id %>">View</a>
+            <a class="button" href="/project/<%= project.id %>/edit">Edit</a>
+          </td>
+          <td><%= project.description %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
