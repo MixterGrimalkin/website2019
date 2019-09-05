@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Admin</h1>
+  <a class="button button-green" href="/new_project">Create</a>
   <table class="u-full-width">
     <thead>
     <th>Project</th>
@@ -9,10 +10,11 @@
     <tbody>
     <% @projects.each do |project| %>
         <tr>
-          <td><%= project.title %></td>
+          <td><strong><%= project.title %></strong></td>
           <td>
-            <a class="button" href="/project/<%= project.id %>">View</a>
-            <a class="button" href="/project/<%= project.id %>/edit">Edit</a>
+            <%= link_to 'View', "/project/#{project.id}", class: 'button' %>
+            <%= link_to 'Edit', "/project/#{project.id}/edit", class: 'button button-blue' %>
+            <%= link_to 'Delete', '#', onclick: "deleteProject(#{project.id}, '#{project.title.gsub("'",'')}')", class: 'button button-red' %>
           </td>
           <td><%= project.description %></td>
         </tr>
@@ -20,3 +22,18 @@
     </tbody>
   </table>
 </div>
+
+<script>
+  function deleteProject(id, name) {
+    if ( confirm("Delete project '" + name + "'?") ) {
+      $.ajax({
+        url: '/project/' + id + '/delete',
+        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        type: 'delete',
+        success: function() {
+          window.reload;
+        }
+      });
+    }
+  }
+</script>

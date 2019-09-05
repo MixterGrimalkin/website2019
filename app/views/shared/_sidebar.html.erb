@@ -20,7 +20,7 @@
       <%= image_tag 'envelope.png', alt: 'Visit me on GitHub' %>
     </a>
   </nav>
-  <!-- Devise notices -->
+  <!-- Notices -->
   <% if user_signed_in? %>
       <div>
         <% if current_user.admin %>
@@ -32,17 +32,28 @@
         <%= link_to('Sign Out', destroy_user_session_path, method: :delete) %>
       </div>
   <% end %>
+  <!-- Notice -->
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 </div>
 
 <script>
-  var $nava = $("nav a");
-  $nava
-      .mouseover(function () {
-        $nava.not(this).stop().animate({opacity: 0.5}, 600);
-      })
-      .mouseout(function () {
-        $nava.stop().animate({opacity: 1.0}, 200);
+  $(function () {
+    // Animate social icons
+    var $nava = $("nav a");
+    $nava
+        .mouseover(function () {
+          $nava.not(this).stop().animate({opacity: 0.5}, 600);
+        })
+        .mouseout(function () {
+          $nava.stop().animate({opacity: 1.0}, 200);
+        });
+
+    // Fade out notices
+    setTimeout(function(){
+      $(".notice").fadeOut(2000, function(){
+        $(".notice").text("").fadeIn();
       });
+    }, 5000);
+  });
 </script>

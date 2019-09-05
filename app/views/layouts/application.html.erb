@@ -48,10 +48,29 @@
 <%= render partial: 'shared/sidebar' %>
 <%= render partial: 'shared/contact' %>
 
-
 <div class="content">
   <%= yield %>
 </div>
 
+<!-- Large image viewer -->
+<div class="image-viewer">
+  <img id="viewed-image" src="/images/hss.jpg"/>
+</div>
+
 </body>
 </html>
+
+<script>
+  $(function () {
+    // Image viewer
+    $(".image-viewer").click(function() {
+      $(".image-viewer").fadeOut(200);
+    });
+    $(".project-page img").click(function() {
+      $("#viewed-image").attr("src", $(this).attr("src"));
+      $(".image-viewer").fadeIn(200);
+
+    });
+
+  });
+</script>

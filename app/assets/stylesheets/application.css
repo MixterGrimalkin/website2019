@@ -56,8 +56,27 @@ nav a {
 .project-page img {
     width: 100%;
     padding: 10px;
+    cursor: zoom-in;
 }
 
+.image-viewer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    vertical-align: middle;
+    display: none;
+}
+
+.image-viewer img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 .project a {
     text-decoration: none;
@@ -105,6 +124,10 @@ nav a {
 .content {
     background-color: rgb(241, 231, 210);
     overflow: scroll;
+}
+
+.button-green {
+    background-color: green;
 }
 
 .my-name {

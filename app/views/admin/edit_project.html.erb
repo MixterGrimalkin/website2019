@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>Edit Project</h1>
-  <%= form_tag "/update_project/#{ @project.id }", id: 'project-form' do |f| %>
+  <h1><%= @project.id ? 'Edit' : 'New' %> Project</h1>
+  <%= form_tag (@project.id ? "/update_project/#{ @project.id }" : '/create_project'), id: 'project-form' do |f| %>
       <div class="form-table">
         <div class="row">
           <div class="two columns">
@@ -11,6 +11,7 @@
                    type="text"
                    name="title"
                    id="title"
+                   autofocus="true"
                    value="<%= @project.title %>"
             >
           </div>
@@ -49,7 +50,9 @@
           </textarea>
         </div>
       </div>
-      <button type="submit" class="button button-primary">Save</button>
-      <a href="/project/<%= @project.id %>" class="button">View</a>
+      <button type="submit" class="button button-green"><%= @project.id ? 'Save' : 'Create' %></button>
+      <% if @project.id %>
+          <a href="/project/<%= @project.id %>" class="button">View</a>
+      <% end %>
   <% end %>
 </div>
