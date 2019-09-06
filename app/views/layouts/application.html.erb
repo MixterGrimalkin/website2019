@@ -53,7 +53,7 @@
 </div>
 
 <!-- Large image viewer -->
-<div class="image-viewer">
+<div id="image-viewer">
   <img id="viewed-image" src=""/>
 </div>
 
@@ -63,12 +63,14 @@
 <script>
   $(function () {
     // Image viewer
-    $(".image-viewer").click(function() {
-      $(".image-viewer").fadeOut(200);
+    var $img = $("#viewed-image");
+    var $viewer = $("#image-viewer");
+    $viewer.click(function() {
+      $viewer.fadeOut(200);
     });
     $(".project-page img").click(function() {
-      $("#viewed-image").attr("src", $(this).attr("src"));
-      $(".image-viewer").fadeIn(200);
+      $img.attr("src", $(this).attr("src"));
+      $viewer.fadeIn(200);
     });
   });
 </script>

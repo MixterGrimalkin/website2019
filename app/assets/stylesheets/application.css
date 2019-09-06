@@ -59,7 +59,7 @@ nav a {
     cursor: zoom-in;
 }
 
-.image-viewer {
+#image-viewer {
     position: absolute;
     left: 0;
     top: 0;
@@ -70,7 +70,7 @@ nav a {
     display: none;
 }
 
-.image-viewer img {
+#image-viewer img {
     position: relative;
     left: 50%;
     top: 50%;
